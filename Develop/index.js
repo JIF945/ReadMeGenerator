@@ -2,7 +2,34 @@
 const fs = require("fs")
 const inquirer = require('inquirer')
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+    {
+        type: 'input',
+        message: 'What is your Motivation?',
+        name: 'motivation'
+    },
+    {
+        type: 'input',
+        message: 'why did you build this project',
+        name: 'the why'
+    },
+    {
+        type: 'input',
+        message: 'what problem does it solve?',
+        name: 'what'
+    },
+    {
+        type: 'input',
+        message: 'what did you learn',
+        name: 'learned'
+    },
+    {
+        type:'input',
+        message: 'what makes your project stand out',
+        name: 'stand out'
+        
+    }
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
@@ -15,6 +42,7 @@ init();
 
 const fs = require('fs');
 const inquirer = require('inquirer');
+const { type } = require("os");
 
 // Questions for user
 // name, location, bio, LinkedIn URL, and GitHub URL
