@@ -53,15 +53,17 @@ const questions = [
         message: " list,  collaborators, third party assets or tutorials used to to make this project. " 
     },
     {
-        type: 'list',
+        type: 'input',
         name: 'License',
-        message: 'List any license used for the project if your unsure refer to [https://choosealicense.com/](https://choosealicense.com/)'
+        message: 'List any license used for the project if you are unsure refer to [https://choosealicense.com/](https://choosealicense.com/)'
     }
 
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(generateMarkDown, data) {}
+function writeToFile(generateMarkDown, data) {
+    fs.writeFile(generateMarkDown,questions)
+}
 
 // TODO: Create a function to initialize app
 function init() {}
