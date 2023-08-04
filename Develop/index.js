@@ -87,3 +87,6 @@ function init() {
 
 // Function call to initialize app
 init();
+const generateMarkdown = (answers) => {
+    const{ questions } = answers
+}
