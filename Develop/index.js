@@ -90,3 +90,44 @@ init();
 const generateMarkdown = (answers) => {
     const{ questions } = answers
 }
+
+
+
+// First, you need to create a function that generates the markdown content for the README based on the user's answers. This function will take the answers object as input and return the generated markdown string. Let's call this function generateMarkdown.
+// function generateMarkdown(answers) {
+//   // Create the markdown content based on the answers
+//   // Return the generated markdown content as a string
+//   return `
+// # ${answers.Title}
+// ect..
+// ect..
+//   `;
+// }
+
+// • Create another function, let's call it writeToFile, that takes the README content (markdown) and writes it to a file. In this case, you are using Node.js fs.writeFile function to write the content to a file named "ReadMe.md".
+// Function: writeToFile
+// Input: README (string), answers (object)
+
+// 1. Start
+// 2. Open the file 'ReadMe.md' for writing.
+// 3. Write the contents of the 'README' string to the file.
+// 4. If there is an error while writing the file, do the following:
+//     a. Print the error message to the console using 'console.error'.
+// 5. Otherwise, do the following:
+//     a. Print "Write file success!" to the console using 'console.log'.
+// 6. End
+
+// • In the init() function, use inquirer.prompt to ask the questions to the user and get their answers. Once you have the answers, call the generateMarkdown function passing the answers to it to generate the markdown content.
+// Function: init
+
+// 1. Start
+// 2. Ask the user a series of questions using 'inquirer.prompt' function, using the 'questions' array defined earlier.
+// 3. Wait for the user to answer the questions.
+// 4. When the user provides answers, do the following:
+//     a. Save the user's answers in the 'answers' variable.
+//     b. Generate the markdown content for the README by calling the 'generateMarkdown' function with the 'answers' object as an argument. Store the generated markdown content in the 'readmeContent' variable.
+//     c. Call the 'writeToFile' function with 'readmeContent' and 'answers' as arguments to write the README file.
+// 5. End
+
+// • Finally, call the writeToFile function and pass the generated markdown content and answers as arguments to write the README file.
+
