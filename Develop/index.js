@@ -3,62 +3,64 @@
 const fs = require("fs");
 const inquirer = require('inquirer');
 const generateMarkdown = require("./utils/generateMarkdown");
+const { default: Choices } = require("inquirer/lib/objects/choices");
 
 // TODO: Create an array of questions for user input
 
 const questions = [
     {
         type: 'input',
-        name: 'title',
+        name: 'Title',
         message: 'what is the title of your project'
 
     },
     {
         type: 'input',
-        name: 'motivation',
+        name: 'Motivation',
         message: 'What is your Motivation?'
-        
+
     },
     {
         type: 'input',
-        name: 'the why',
-        message: 'why did you build this project'
+        name: 'Reason',
+        message:'why did you build this project'
     },
     {
         type: 'input',
-        name: 'solution',
+        name: 'Solution',
         message: 'what problem does it solve?',
-        
+
     },
     {
         type: 'input',
-        name: 'skills',
+        name: 'Skills',
         message: 'what did you learn'
     },
     {
-        type:'input',
-        name: 'special',
-        message: 'what makes your project stand out',   
+        type: 'input',
+        name: 'Special',
+        message: 'what makes your project stand out',
     },
     {
         type: 'editor',
-        name: 'installation',
-        message:'What are the steps required to install your project?'
+        name: 'Installation',
+        message: 'What are the steps required to install your project?'
     },
     {
         type: 'editor',
-        name: 'usage',
-        message:' provide instructions and examples for use'
+        name: 'Usage',
+        message: ' provide instructions and examples for use'
     },
     {
         type: 'editor',
         name: 'Credits',
-        message: " list,  collaborators, third party assets or tutorials used to to make this project. " 
+        message: " list collaborators, third party assets or tutorials used to to make this project. "
     },
     {
         type: 'input',
         name: 'License',
-        message: 'List any license used for the project if you are unsure refer to [https://choosealicense.com/](https://choosealicense.com/)'
+        message: 'List any license used for the project if you are unsure refer to (https://choosealicense.com/)',
+        Choices: ['none', 'mit', 'GNU', 'Apache', 'moxilla',]
     }
 
 ];
@@ -66,13 +68,21 @@ const questions = [
 
 
 // TODO: Create a function to write README file
-function writeToFile(README, questions) {}
+function writeToFile(README, answers) {
+    fs.writeFile('ReadMe.md',answers, (error) => {
+        if (error) {
+            console.error(error);
+        } else {
+            console.log("Write file success!");
+        }
+    });
+}
 
 // TODO: Create a function to initialize app
 function init() {
- inquirer.prompt(questions).then((answers) => {
-    console.log(answers)
- });   
+    inquirer.prompt(questions).then((answers) => {
+        console.log(answers)
+    });
 }
 
 // Function call to initialize app
