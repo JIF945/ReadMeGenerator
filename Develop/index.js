@@ -3,7 +3,7 @@
 const fs = require("fs");
 const inquirer = require('inquirer');
 const { default: Choices } = require("inquirer/lib/objects/choices");
-
+// const generateMarkdown = require("./utils/generateMarkdown");
 // TODO: Create an array of questions for user input
 
 const questions = [
@@ -67,33 +67,48 @@ const questions = [
 
 
 // TODO: Create a function to write README file
-function writeToFile(README, answers) {
-    fs.writeFile('ReadMe.md',answers, (error) => {
-        if (error) {
-            console.error(error);
-        } else {
-            console.log("Write file success!");
-        }
-    });
+ function writeToFile(generateMarkdown, questions) {
+    fs.writeFile(generateMarkdown, questions, (err, data) => {
+        console.log('READme file has been created "just dont know where yet"');
+    })
+ }
+ function generateMarkdown(answers) {
+    //   // Create the markdown content based on the answers
+    // Return the generated markdown content as a string
+    return`
+    # ${answers.Title}
+    # ${answers.Motivation}
+    # ${answers.Reason}
+    # ${answers.Solution}
+   # ${answers.Skills}
+    # ${answers.Special}
+    # ${answers.Installation}
+    # ${answers.Usage}
+    # ${answers.Credits}
+    # ${answers.License}
+   ` ;
 }
+
+
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((answers) => {
-        console.log(answers)
+    inquirer
+    .prompt(questions)
+    .then((answers) => {
+    console.log(answers)
+    writeToFile('./generatedFile/README.md', generateMarkdown(answers))
     });
 }
 
 // Function call to initialize app
 init();
-const generateMarkdown = (answers) => {
-    const{ questions } = answers
-}
 
 
 
 // First, you need to create a function that generates the markdown content for the README based on the user's answers. This function will take the answers object as input and return the generated markdown string. Let's call this function generateMarkdown.
-const generateMarkdown = require("./utils/generateMarkdown");
+
+
 function generateMarkdown(answers) {
 //   // Create the markdown content based on the answers
 // Return the generated markdown content as a string
