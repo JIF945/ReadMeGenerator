@@ -2,7 +2,6 @@
 
 const fs = require("fs");
 const inquirer = require('inquirer');
-const generateMarkdown = require("./utils/generateMarkdown");
 const { default: Choices } = require("inquirer/lib/objects/choices");
 
 // TODO: Create an array of questions for user input
@@ -94,15 +93,28 @@ const generateMarkdown = (answers) => {
 
 
 // First, you need to create a function that generates the markdown content for the README based on the user's answers. This function will take the answers object as input and return the generated markdown string. Let's call this function generateMarkdown.
-// function generateMarkdown(answers) {
+const generateMarkdown = require("./utils/generateMarkdown");
+function generateMarkdown(answers) {
 //   // Create the markdown content based on the answers
-//   // Return the generated markdown content as a string
-//   return `
-// # ${answers.Title}
-// ect..
-// ect..
-//   `;
-// }
+// Return the generated markdown content as a string
+return`
+# ${answers.Title}
+# ${answers.Motivation}
+# ${answers.Reason}
+# ${answers.Solution}
+# ${answers.Skills}
+# ${answers.Special}
+# ${answers.Installation}
+# ${answers.Usage}
+# ${answers.Credits}
+# ${answers.License}
+` ;
+}
+
+
+// 
+
+
 
 // • Create another function, let's call it writeToFile, that takes the README content (markdown) and writes it to a file. In this case, you are using Node.js fs.writeFile function to write the content to a file named "ReadMe.md".
 // Function: writeToFile
