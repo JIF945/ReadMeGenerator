@@ -68,11 +68,14 @@ const questions = [
 
 
 // TODO: Create a function to write README file
- function writeToFile(generateMarkdown, questions) {
-    fs.writeFile(generateMarkdown, questions, (err, data) => {
-        console.log('READme.md file has been created "just dont know where yet"');
-    })
- }
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(fileName, data);
+  
+    //   fs.writeFile(generateMarkdown, questions, (err, data) => {
+    //     console.log('READme.md file has been created "just dont know where yet"');
+    //   });
+}  
+
  function generateMarkdown(answers) {
     //   // Create the markdown content based on the answers
     // Return the generated markdown content as a string
@@ -98,7 +101,7 @@ function init() {
     .prompt(questions)
     .then((answers) => {
     console.log(answers)
-    writeToFile('./generatedFile/README.md', generateMarkdown(answers))
+    writeToFile('README.md', generateMarkdown(answers));
     });
 }
 
