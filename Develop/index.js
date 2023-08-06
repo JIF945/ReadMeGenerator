@@ -42,17 +42,17 @@ const questions = [
         message: 'what makes your project stand out',
     },
     {
-        type: 'editor',
+        type: 'input',
         name: 'Installation',
         message: 'What are the steps required to install your project?'
     },
     {
-        type: 'editor',
+        type: 'input',
         name: 'Usage',
         message: ' provide instructions and examples for use'
     },
     {
-        type: 'editor',
+        type: 'input',
         name: 'Credits',
         message: " list collaborators, third party assets or tutorials used to to make this project. "
     },
