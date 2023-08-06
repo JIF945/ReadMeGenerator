@@ -4,8 +4,9 @@ const fs = require("fs");
 const inquirer = require('inquirer');
 const { default: Choices } = require("inquirer/lib/objects/choices");
 // const generateMarkdown = require("./utils/generateMarkdown");
-// TODO: Create an array of questions for user input
 
+
+// TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -69,7 +70,7 @@ const questions = [
 // TODO: Create a function to write README file
  function writeToFile(generateMarkdown, questions) {
     fs.writeFile(generateMarkdown, questions, (err, data) => {
-        console.log('READme file has been created "just dont know where yet"');
+        console.log('READme.md file has been created "just dont know where yet"');
     })
  }
  function generateMarkdown(answers) {
@@ -109,22 +110,22 @@ init();
 // First, you need to create a function that generates the markdown content for the README based on the user's answers. This function will take the answers object as input and return the generated markdown string. Let's call this function generateMarkdown.
 
 
-function generateMarkdown(answers) {
-//   // Create the markdown content based on the answers
-// Return the generated markdown content as a string
-return`
-# ${answers.Title}
-# ${answers.Motivation}
-# ${answers.Reason}
-# ${answers.Solution}
-# ${answers.Skills}
-# ${answers.Special}
-# ${answers.Installation}
-# ${answers.Usage}
-# ${answers.Credits}
-# ${answers.License}
-` ;
-}
+// function generateMarkdown(answers) {
+// //   // Create the markdown content based on the answers
+// // Return the generated markdown content as a string
+// return`
+// # ${answers.Title}
+// # ${answers.Motivation}
+// # ${answers.Reason}
+// # ${answers.Solution}
+// # ${answers.Skills}
+// # ${answers.Special}
+// # ${answers.Installation}
+// # ${answers.Usage}
+// # ${answers.Credits}
+// # ${answers.License}
+// ` ;
+// }
 
 
 // 
