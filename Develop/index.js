@@ -3,20 +3,20 @@
 const fs = require("fs");
 const inquirer = require('inquirer');
 const { default: Choices } = require("inquirer/lib/objects/choices");
-// const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
-        name: 'Title',
+        name: 'title',
         message: 'what is the title of your project'
 
     },
     {
         type: 'input',
-        name: 'Motivation',
+        name: 'motivation',
         message: 'What is your Motivation?'
 
     },
@@ -57,10 +57,10 @@ const questions = [
         message: " list collaborators, third party assets or tutorials used to to make this project. "
     },
     {
-        type: 'input',
-        name: 'License',
+        type: 'list',
+        name: 'license',
         message: 'List any license used for the project if you are unsure refer to (https://choosealicense.com/)',
-        Choices: ['none', 'mit', 'GNU', 'Apache', 'moxilla',]
+        choices: ['none', 'mit', 'GNU', 'Apache', 'moxilla',]
     }
 
 ];
@@ -76,22 +76,28 @@ function writeToFile(fileName, data) {
     //   });
 }  
 
- function generateMarkdown(answers) {
-    //   // Create the markdown content based on the answers
-    // Return the generated markdown content as a string
-    return`
-    # ${answers.Title}
-    # ${answers.Motivation}
-    # ${answers.Reason}
-    # ${answers.Solution}
-   # ${answers.Skills}
-    # ${answers.Special}
-    # ${answers.Installation}
-    # ${answers.Usage}
-    # ${answers.Credits}
-    # ${answers.License}
-   ` ;
-}
+//  function generateMarkdown(answers) {
+//     //   // Create the markdown content based on the answers
+//     // Return the generated markdown content as a string
+//     return `# ${answers.title}
+
+//       ## User Story
+//       ### ${answers.title}
+
+//     `;
+//     return`
+//      # ${answers.title}
+//      ${answers.Motivation}
+//      ${answers.Reason}
+//     ${answers.Solution}
+//     ${answers.Skills}
+//      ${answers.Special}
+//      ${answers.Installation}
+//      ${answers.Usage}
+//      ${answers.Credits}
+//      ${answers.License}
+//    ` ;
+// }
 
 
 
@@ -101,6 +107,7 @@ function init() {
     .prompt(questions)
     .then((answers) => {
     console.log(answers)
+    const template = generateMarkdown(answers)
     writeToFile('README.md', generateMarkdown(answers));
     });
 }
