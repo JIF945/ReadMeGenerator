@@ -22,23 +22,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'reason',
-        message:'why did you build this project'
-    },
-    {
-        type: 'input',
-        name: 'solution',
-        message: 'what problem does it solve?',
-
-    },
-    {
-        type: 'input',
-        name: 'skills',
-        message: 'what did you learn'
-
-    },
-    {
-        type: 'input',
         name: 'installation',
         message: 'What are the steps required to install your project?'
     },

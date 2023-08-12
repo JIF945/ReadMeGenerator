@@ -1,28 +1,14 @@
 
-  # Title
+ # ReadMe
 
   
  ## About
- how to automation  
+ The project creates a application that generates a readme file based on the questions a user answeres. With the ReadMe being auto-generated this frees up a coders time to work on other prjects. javascript,node and inquire are use in the project. check the usage section to see how the project is used.  
 
- ## Reason
- had to
-
-
- ## Solution
- less typy more computer work
-
-
-
- ## Skills
- automation make a coders life easier
 
 
  ## Table of Contents
  * [About](#about)
- * [Reason](#reason)
- * [Solution](#solution)
- * [Skills](#skills)
  * [Installation](#installation)
  * [Usage](#usage)
  * [Credits](#credits)
@@ -32,26 +18,27 @@
 
 
  ## Installation
-  on the command line run npm i 
+ video
 
 
 
  ## Usage
- video 
+ Click the video link for usage. 
+ video
 
 
 
  ## Credits
- no noe
+ none
 
 
 
  ## Contact
  To contact me about this project i can be reached at
  * Email:   
- no 
+ email
  * Github:   
- no 
+ email
 
 
 
