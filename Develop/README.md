@@ -1,5 +1,5 @@
 
- # titel
+ # title
 
   
  ## About
@@ -36,7 +36,7 @@
  ## Contact
  To contact me about this project i can be reached at
  * Email:   
- est
+ test
  * Github:   
  test
 
@@ -44,7 +44,7 @@
 
 
  ## license
- ![License](https://img.shields.io/badge/License-Apache-blue.svg)
+ ![License](https://img.shields.io/badge/License-GNU-blue.svg)
 
 
 
