@@ -1,9 +1,9 @@
 
- # test
+ # ReadMe Generator
 
   
  ## About
- test 
+ The project creates a application that generates a readme file based on the questions a user answers. With the ReadMe being auto-generated this frees up a coders time to work on other projects.Javascript,node and inquire are use in the project. Check the usage section to see how the project work. 
 
 
 
@@ -18,33 +18,33 @@
 
 
  ## Installation
- test
+ On the command line enter node .
 
 
 
  ## Usage
  Click the video link for usage. 
- test
+ video link: https://tinyurl.com/ReadMefunction
 
 
 
  ## Credits
- test
+ NA
 
 
 
  ## Contact
  To contact me about this project i can be reached at
  * Email:   
- email
+ joshua.james918@gmail.com
  * Github:   
- email
+ https://github.com/JIF945/ReadMeGenerator
 
 
 
 
  ## license
- ![License](https://img.shields.io/badge/License-Apache-blue.svg)
+ ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 
 
