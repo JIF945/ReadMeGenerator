@@ -16,8 +16,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'motivation',
-        message: 'What is your Motivation?'
+        name: 'about',
+        message: 'What is your project about?'
 
     },
     {
@@ -36,12 +36,6 @@ const questions = [
         name: 'skills',
         message: 'what did you learn'
 
-
-    },
-    {
-        type: 'input',
-        name: 'special',
-        message: 'what makes your project stand out',
     },
     {
         type: 'input',
@@ -51,7 +45,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: ' provide instructions and examples for use'
+        message: 'Provide instructions and examples for use'
     },
     {
         type: 'input',
@@ -62,7 +56,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'List any license used for the project if you are unsure refer to (https://choosealicense.com/)',
-        choices: ['none', 'mit', 'GNU', 'Apache', 'moxilla',]
+        choices: ['none', 'MIT', 'GNU', 'Apache', 'moxilla',]
     },
     {
         type: 'input',
@@ -82,36 +76,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(fileName, data);
-  
-    //   fs.writeFile(generateMarkdown, questions, (err, data) => {
-    //     console.log('READme.md file has been created "just dont know where yet"');
-    //   });
 }  
-
-//  function generateMarkdown(answers) {
-//     //   // Create the markdown content based on the answers
-//     // Return the generated markdown content as a string
-//     return `# ${answers.title}
-
-//       ## User Story
-//       ### ${answers.title}
-
-//     `;
-//     return`
-//      # ${answers.title}
-//      ${answers.Motivation}
-//      ${answers.Reason}
-//     ${answers.Solution}
-//     ${answers.Skills}
-//      ${answers.Special}
-//      ${answers.Installation}
-//      ${answers.Usage}
-//      ${answers.Credits}
-//      ${answers.License}
-//    ` ;
-// }
-
-
 
 // TODO: Create a function to initialize app
 function init() {

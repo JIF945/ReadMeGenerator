@@ -30,28 +30,64 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
+  
+ ## About
+ ${data.about} 
 
-## motivation
- ${data.motivation}
-
-
- ## Table of Contents
-
- * [reason](#reason)
-
-
-
-
-## reason
+ ## Reason
  ${data.reason}
- ## solution
+
+
+ ## Solution
  ${data.solution}
 
 
 
+ ## Skills
+ ${data.skills}
 
 
-${renderLicenseBadge(data.license)}
+ ## Table of Contents
+ * [About](#about)
+ * [Reason](#reason)
+ * [Solution](#solution)
+ * [Skills](#skills)
+ * [Installation](#installation)
+ * [Usage](#usage)
+ * [Credits](#credits)
+ * [License](#license)
+ * [Contact](#contact)
+
+
+
+ ## Installation
+ ${data.installation}
+
+
+
+ ## Usage
+ Click the video link for usage. 
+ ${data.usage}
+
+
+
+ ## Credits
+ ${data.credits}
+
+
+
+ ## Contact
+ To contact me about this project i can be reached at
+ * Email:   
+ ${data.email}
+ * Github:   
+ ${data.github}
+
+
+
+
+ ## license
+ ${renderLicenseBadge(data.license)}
 
 
 
