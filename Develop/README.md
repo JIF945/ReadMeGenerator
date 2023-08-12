@@ -1,9 +1,9 @@
 
- # ReadMe
+ # titel
 
   
  ## About
- The project creates a application that generates a readme file based on the questions a user answeres. With the ReadMe being auto-generated this frees up a coders time to work on other prjects. javascript,node and inquire are use in the project. check the usage section to see how the project is used.  
+ test 
 
 
 
@@ -18,33 +18,33 @@
 
 
  ## Installation
- video
+ test
 
 
 
  ## Usage
  Click the video link for usage. 
- video
+ test
 
 
 
  ## Credits
- none
+ test
 
 
 
  ## Contact
  To contact me about this project i can be reached at
  * Email:   
- email
+ est
  * Github:   
- email
+ test
 
 
 
 
  ## license
- ![License](https://img.shields.io/badge/License-MIT-blue.svg)
+ ![License](https://img.shields.io/badge/License-Apache-blue.svg)
 
 
 
