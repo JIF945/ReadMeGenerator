@@ -22,38 +22,40 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Reason',
+        name: 'reason',
         message:'why did you build this project'
     },
     {
         type: 'input',
-        name: 'Solution',
+        name: 'solution',
         message: 'what problem does it solve?',
 
     },
     {
         type: 'input',
-        name: 'Skills',
+        name: 'skills',
         message: 'what did you learn'
+
+
     },
     {
         type: 'input',
-        name: 'Special',
+        name: 'special',
         message: 'what makes your project stand out',
     },
     {
         type: 'input',
-        name: 'Installation',
+        name: 'installation',
         message: 'What are the steps required to install your project?'
     },
     {
         type: 'input',
-        name: 'Usage',
+        name: 'usage',
         message: ' provide instructions and examples for use'
     },
     {
         type: 'input',
-        name: 'Credits',
+        name: 'credits',
         message: " list collaborators, third party assets or tutorials used to to make this project. "
     },
     {
@@ -61,6 +63,16 @@ const questions = [
         name: 'license',
         message: 'List any license used for the project if you are unsure refer to (https://choosealicense.com/)',
         choices: ['none', 'mit', 'GNU', 'Apache', 'moxilla',]
+    },
+    {
+        type: 'input',
+        name: 'email', 
+        message: 'enter your email'
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub profile name '
     }
 
 ];
